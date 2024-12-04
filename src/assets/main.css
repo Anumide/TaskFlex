@@ -1,35 +1,32 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root {
+  --primary-color: #515eff;
+  --primary-text-color: #000646;
+  --secondary-text-color: #5d85ff;
+  --bg-secondary: #e2e3ff;
+  --bg-primary: #f0f0ff;
+  --bg-light: #f5f5ff;
+  --in-progress-bg: #51dce4;
+  --in-progress-text-color: #016065;
+  --delay-text-color: #996101;
+  --delay-bg: #ffc25f;
+  --pending-text-color: #ab1d3f;
+  --pending-bg: #ff618b;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.dark {
+  --primary-text-color: #fff;
+  --bg-secondary: #000329;
+  --bg-primary: #000747;
+  --bg-light: #000750;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+* {
+  font-family: "Noto Sans KR", "Lato", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
